@@ -1,11 +1,18 @@
 #!/bin/bash
 
-# Config
-HOST=hlw31:8080
+# Change to OpenHAB's REST URL
+HOST=127.0.0.1:8080
 
-# Parameter
+# Parameters
 CMD=$1
 ITEM=$2
+
+# example usage
+# oh_cmd get Door_Status
+# oh_cmd set Light_Kitchen ON
+# oh_cmd set Roller_Living 75
+# oh_cmd get Roller_Living
+# I think you got it ;)
 
 case $CMD in
 get)
