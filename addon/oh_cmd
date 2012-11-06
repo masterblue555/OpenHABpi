@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Config
+HOST=hlw31:8080
+
+# Parameter
+CMD=$1
+ITEM=$2
+
+case $CMD in
+get)
+    curl http://$HOST/rest/items/$ITEM/state
+    ;;
+
+set)
+    VAL=$3
+    echo -n $VAL | curl -X PUT --raw -T - http://$HOST/rest/items/$ITEM/state
+    ;;
+esac
+

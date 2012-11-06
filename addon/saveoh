@@ -1,0 +1,1 @@
+rsync -avlr --delete --exclude .tmp --exclude .eclipse /openhab/ /home/pi/openhab/
