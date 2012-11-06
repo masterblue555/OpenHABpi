@@ -12,12 +12,11 @@
 # Description:       
 ### END INIT INFO
 
-set -e
+# this is an Init-Script. Place it inside /etc/init.d, make it executable
+# and place your openhab inside /home/pi/openhab. This script will copy
+# this instance into RAM and will run it there
 
-#PARAM=/etc/default/fake-hwclock
-#if [ -f $PARAM ]; then
-#    . "$PARAM"
-#fi
+set -e
 
 start ()
 {
